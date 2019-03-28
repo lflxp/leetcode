@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 /*
+@title 两数之和
+@result
 成功
 显示详情
 执行用时 : 60 ms, 在Two Sum的Go提交中击败了33.60% 的用户
