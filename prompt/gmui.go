@@ -47,6 +47,7 @@ var commands = []prompt.Suggest{
 	{Text: "explain", Description: "Documentation of resources."},
 	{Text: "convert", Description: "Convert config files between different API versions"},
 	{Text: "top", Description: "Display Resource (CPU/Memory/Storage) usage"},
+	{Text: "root", Description: "我自定义的内嵌框架"},
 
 	// Custom command.
 	{Text: "exit", Description: "Exit this program"},
