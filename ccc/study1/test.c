@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <limits.h>
 #include <float.h>
+#include <time.h>
+#include <stdlib.h>
 
 int x=1;
 int y=2;
@@ -90,8 +92,63 @@ void funcdo() {
     }while ( a< 20);
 }
 
+/* 函数返回两个数中较大的那个数 */
+int max(int num1, int num2) 
+{
+   /* 局部变量声明 */
+   int result;
+ 
+   if (num1 > num2)
+      result = num1;
+   else
+      result = num2;
+ 
+   return result; 
+}
+
+void arrayDouble() {
+    int n[10];
+    int i,j;
+
+    /* 初始化数组元素 */         
+    for ( i = 0; i < 10; i++ )
+    {
+        n[ i ] = i + 100; /* 设置元素 i 为 i + 100 */
+    }
+    
+    /* 输出数组中每个元素的值 */
+    for (j = 0; j < 10; j++ )
+    {
+        printf("Element[%d] = %d\n", j, n[j] );
+    }
+}
+
+/*要生成和返回随机数的函数 */
+int * genRandom() {
+    static int r[10];
+    int i;
+
+    /*设置种子 */
+    srand((unsigned)time(NULL));
+    for (i=0;i<10;++i) {
+        r[i] = rand();
+        printf("r[%d] = %d\n", i, r[i]);
+    }
+
+    return r;
+}
+
 int main() 
 {
+    arrayDouble();
+    int one = 100;
+    int two = 200;
+    int ret;
+
+    ret = max(one,two);
+
+    printf("Max value is : %d\n", ret);
+
     dowhile();
     // /*first prom */
     // printf("Hello world\n");
@@ -223,5 +280,14 @@ int main()
     funcdo();
     isZhiShu();
     whileInstance();
+
+    /*一个指向整数的指针 */
+    int *p;
+    int i;
+
+    p = genRandom();
+    for (i=0;i<10;i++) {
+        printf("*(p + %d) : %d\n", i, *(p + i));
+    }
     return 0;
 }
