@@ -1,6 +1,7 @@
 #include "utils/func.c"
 #include "utils/hello.c"
 #include "stringstudy/test1.c"
+#include "utils/structs.c"
 
 void backupfunc() {
     // arrayDouble();
@@ -88,8 +89,14 @@ double getAverage(int *arr,int size) {
 int main() 
 {
     
-    read();
-    hanshustring();
+    // read();
+    // hanshustring();
+
+    // printf("title: %s \n author: %s \nsubject: %s\n book_id: %d\n",book2.title,book2.author,book2.subject,book2.book_id);
+
+    // structsFunc();
+    // structFunc2();
+    useDomain();
     return 0;
 }
 
