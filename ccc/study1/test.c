@@ -1,8 +1,8 @@
-#include "func.c"
+#include "utils/func.c"
 #include "utils/hello.c"
+#include "stringstudy/test1.c"
 
-int main() 
-{
+void backupfunc() {
     // arrayDouble();
     // int one = 100;
     // int two = 200;
@@ -69,8 +69,6 @@ int main()
     testInnerFunc();
 
     HelloWorld();
-
-    return 0;
 }
 
 // 遍历数组指针首地址对应的常量数组值
@@ -86,3 +84,12 @@ double getAverage(int *arr,int size) {
 
     return avg;
 }
+
+int main() 
+{
+    
+    read();
+    hanshustring();
+    return 0;
+}
+
