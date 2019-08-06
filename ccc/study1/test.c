@@ -2,6 +2,9 @@
 #include "utils/hello.c"
 #include "stringstudy/test1.c"
 #include "utils/structs.c"
+#include "utils/share.c"
+#include "utils/position.c"
+#include "utils/typedef.c"
 
 void backupfunc() {
     // arrayDouble();
@@ -96,7 +99,18 @@ int main()
 
     // structsFunc();
     // structFunc2();
-    useDomain();
+    // useDomain();
+
+    // unionTest();
+
+    // unionTest1();
+
+    // positionTest();
+
+    // posTest();
+
+    testBooks();
+    testDefine();
     return 0;
 }
 
