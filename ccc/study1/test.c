@@ -5,6 +5,9 @@
 #include "utils/share.c"
 #include "utils/position.c"
 #include "utils/typedef.c"
+#include "utils/malloc.c"
+#include "utils/scanfs.c"
+#include "pre/p1.c"
 
 void backupfunc() {
     // arrayDouble();
@@ -109,8 +112,14 @@ int main()
 
     // posTest();
 
-    testBooks();
-    testDefine();
+    // testBooks();
+    // testDefine();
+
+    // memTest();
+
+    // testScanfs();
+
+    p1(1,1);
     return 0;
 }
 
