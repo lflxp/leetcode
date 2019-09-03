@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*
-#!/usr/bin/python3
+#!/usr/local/bin/python3
 import pandas as pd 
 import numpy as np
 
@@ -35,10 +35,10 @@ import numpy as np
 
 # print(df3.sort_values(by='E'))
 
-# pandas 选择数据
-dates = pd.date_range('20190101',periods=6)
-# print(dates)
-sd = pd.DataFrame(np.arange(24).reshape((6,4)),index=dates,columns=['A','B','C','D'])
+# # pandas 选择数据
+# dates = pd.date_range('20190101',periods=6)
+# # print(dates)
+# sd = pd.DataFrame(np.arange(24).reshape((6,4)),index=dates,columns=['A','B','C','D'])
 # print(sd)
 # print(sd['A'],sd.A)
 # print(sd[0:3])
@@ -58,26 +58,59 @@ sd = pd.DataFrame(np.arange(24).reshape((6,4)),index=dates,columns=['A','B','C',
 # Boolean indexing
 # print(sd[sd.A > 17])
 
-sd.iloc[2,2] = 212
-print(sd)
+# sd.iloc[2,2] = 212
+# print(sd)
 
-sd.loc['20190104','B'] = 998
-print(sd)
+# sd.loc['20190104','B'] = 998
+# print(sd)
 
-sd.loc['20190104',['A','B']] = [1,2]
-print(sd)
+# sd.loc['20190104',['A','B']] = [1,2]
+# print(sd)
 
-sd[sd.B > 4] = 0
-print(sd)
+# sd[sd.B > 4] = 0
+# print(sd)
 
-sd.A[sd.A < 1] = 2
-print(sd)
+# sd.A[sd.A < 1] = 2
+# print(sd)
 
-sd['F'] = np.nan
-print(sd)
+# sd['F'] = np.nan
+# print(sd)
 
-sd.F = 9
-print(sd)
+# sd.F = 9
+# print(sd)
 
-sd['E'] = pd.Series([1,2,3,4,5,6],index=dates)
-print(sd)
+# sd['E'] = pd.Series([1,2,3,4,5,6],index=dates)
+# print(sd)
+
+# print(sd[sd.D > 8])
+
+# pandas 处理丢失的数据
+# dates = pd.date_range('20190101',periods=6)
+# # print(dates)
+# sd = pd.DataFrame(np.arange(24).reshape((6,4)),index=dates,columns=['A','B','C','D'])
+
+# sd.iloc[0,1] = np.nan
+# sd.iloc[1,3] = np.nan
+
+# print(sd)
+
+# print(sd.dropna(axis=0,how='any')) # how = {'any','all'}
+# print(sd.fillna(value=0))
+# print(sd.isnull())
+# print(np.any(sd.isnull()) == True)
+
+# pandas 数据合并
+
+df1 = pd.DataFrame(np.ones((3,4))*0, columns=['a','b','c','d'])
+df2 = pd.DataFrame(np.ones((3,4))*1, columns=['a','b','c','d'])
+df3 = pd.DataFrame(np.ones((3,4))*2, columns=['a','b','c','d'])
+# print(df1)
+# print(df2)
+# print(df3)
+# res = pd.concat([df1,df2,df3],axis=0,ignore_index=True)
+# print(res)
+
+print(df1.append([df2,df3]))
+
+s1 = pd.Series([1,2,3,4],index=['a','b','c','d'])
+print(df1.append(s1,ignore_index=True))
