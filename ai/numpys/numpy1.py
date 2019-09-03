@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/python3
 import numpy as np
 
 # array = np.array([[1,2,3],[4,5,6]])
@@ -61,8 +61,8 @@ import numpy as np
 # print(np.max(d1,axis=0)) # 求值于每一列
 # print(np.min(d1))
 
-e1 = np.arange(23,0,-2).reshape((3,4))
-print(e1)
+# e1 = np.arange(23,0,-2).reshape((3,4))
+# print(e1)
 # print(np.argmax(e1))
 # print(np.argmin(e1))
 # print(np.mean(e1))
@@ -76,17 +76,60 @@ print(e1)
 # print(e1.T)
 # print(np.clip(e1,3,19))
 
-print(e1[1][1])
-print(e1[1,1])
-print(e1.T[0,0])
+# print(e1[1][1])
+# print(e1[1,1])
+# print(e1.T[0,0])
 
-for column in e1.T:
-    print(column)
+# for column in e1.T:
+#     print(column)
 
-print(e1[1,1:3])
-print(e1[2,:])
-print(e1.flatten())
-print(e1.T.flatten())
+# print(e1[1,1:3])
+# print(e1[2,:])
+# print(e1.flatten())
+# print(e1.T.flatten())
 
-for item in e1.flat: # flat是迭代器
-    print(item)
+# for item in e1.flat: # flat是迭代器
+#     print(item)
+
+# e1 = np.array([1,1,1])[:,np.newaxis]
+# e2 = np.array([2,2,2])[:,np.newaxis]
+# e1 = np.array([1,1,1])[:,np.newaxis]
+# e2 = np.array([2,2,2])[:,np.newaxis]
+
+# e3 = np.vstack((e1,e2))
+# print(e3,e3.shape,e3.ndim,e3.size)
+# e4 = np.hstack((e1,e2))
+# print(e4,e4.shape)
+# print(e1.T.shape)
+# print(e1.shape)
+# print(e1[np.newaxis,:],e1[np.newaxis,:].shape)
+# print(e1[:,np.newaxis],e1[:,np.newaxis].shape)
+
+# print((e1,e1,e2))
+
+# print(np.concatenate((e1,e2,e2,e1),axis=0))
+
+# 矩阵分割
+# f1 = np.arange(12).reshape((3,4))
+# # print(f1)
+
+# # axis=1 竖着切  axis=0 横着切
+# print(np.split(f1,3,axis=0))
+# print(np.array_split(f1,3,axis=1))
+
+# # vsplit 横着分  hsplit 竖着分
+# print(np.vsplit(f1,3))
+# print(np.hsplit(f1,2))
+# print(np.hsplit(f1,))
+
+# 矩阵copy
+g1 = np.arange(4)
+print(g1)
+g1[0] = 11
+print(g1)
+g1[1:3] = [33,99]
+print(g1)
+
+g3 = g1.copy() # deep copy 划分了新的内存空间存储新的值而不是同数据的指针
+g3[1] = 0
+print(g1,g3)

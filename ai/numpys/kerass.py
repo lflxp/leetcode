@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*
+#!/usr/bin/python3
 # please note, all tutorial code are running under python3.5.
 # If you use the version like python2.7, please modify the code accordingly
 # pip3 install tensorflow==1.14
+# pip3 install keras
 
 # 4 - Regressor example
 
