@@ -12,7 +12,7 @@ https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 2、数据结构学习
 3、leetcode学习和总结
 4、反应式设计模式
-5、AI 神经网络
+5、AI 神经网络(numpy、pandas、matplotlib、keras、tensorflow、caffe、pytorch)
 6、Linux 基础私房菜 工具总结和开发
 7、算法导论知识总结
 8、智能机器人
