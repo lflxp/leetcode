@@ -26,3 +26,33 @@ class Student {
 var stu = new Student
 
 println(stu.getName())
+
+// trait 特质 多重继承
+trait Human {
+    val id:Int
+    val name:String
+
+    def sayHello():String = "hello "+name
+}
+
+trait Actions {
+    def getActionNames():String
+}
+
+class Teacher (val id:Int,val name:String) extends Human with Actions {
+    def getActionNames():String = "Action is running"
+}
+
+object Demo2 {
+    def main(args: Array[String]) {
+        val s1 = new Teacher(1,"Lixueping")
+        println(s1.sayHello())
+        println(s1.getActionNames())
+    }
+}
+
+// Demo2()
+
+val s1 = new Teacher(1,"Lixueping")
+println(s1.sayHello())
+println(s1.getActionNames())
